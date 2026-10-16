@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Order</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="page">
+    <h1>New Order</h1>
+
+    <div class="card">
+      <h2>1. Select customer</h2>
+      <select id="customerSelect"></select>
+    </div>
+
+    <div class="card">
+      <h2>2. Add products</h2>
+      <div class="row">
+        <select id="productSelect"></select>
+        <input type="number" id="quantity" value="1" min="1" step="1">
+        <button type="button" id="addItemBtn">Add to order</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3. Order items</h2>
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th>Action</th></tr>
+        </thead>
+        <tbody id="itemsTable"></tbody>
+      </table>
+      <div class="total">Total: <span id="total">0</span></div>
+      <button type="button" id="saveOrderBtn">Save Order</button>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/order-new.js"></script>
+</body>
+</html>0qishiqo p[]

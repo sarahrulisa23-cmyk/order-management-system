@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Users</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="page">
+    <h1>Users</h1>
+
+    <form id="userForm" class="card">
+      <h2 id="formTitle">Add User</h2>
+      <input type="hidden" id="userId">
+      <input type="text" id="name" placeholder="Full name" required>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password (at least 6 characters)">
+      <select id="role">
+        <option value="staff">Staff</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Save User</button>
+      <button type="button" id="cancelBtn" class="secondary" style="display:none">Cancel</button>
+      <p id="formHint" style="font-size:13px;color:#64748b;display:none">
+        Leave the password empty to keep the current one.
+      </p>
+    </form>
+
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Username</th><th>Role</th><th>Action</th></tr>
+      </thead>
+      <tbody id="userTable"></tbody>
+    </table>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/users.js"></script>
+</body>
+</html>

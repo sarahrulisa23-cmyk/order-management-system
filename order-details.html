@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Details</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="page">
+    <p><a href="orders.html">&larr; Back to orders</a></p>
+    <h1 id="orderTitle">Order Details</h1>
+
+    <div class="card info">
+      <h2>Customer</h2>
+      <p><strong>Name:</strong> <span id="custName"></span></p>
+      <p><strong>Phone:</strong> <span id="custPhone"></span></p>
+      <p><strong>Email:</strong> <span id="custEmail"></span></p>
+      <p><strong>Address:</strong> <span id="custAddress"></span></p>
+      <p><strong>Date:</strong> <span id="orderDate"></span></p>
+    </div>
+
+    <div class="card">
+      <h2>Items</h2>
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Unit price</th><th>Quantity</th><th>Subtotal</th></tr>
+        </thead>
+        <tbody id="itemsTable"></tbody>
+      </table>
+      <div class="total">Total: <span id="total"></span></div>
+    </div>
+
+    <div class="card">
+      <h2>Status</h2>
+      <p>Current status: <span id="currentStatus" class="badge"></span></p>
+      <div id="statusControls">
+        <select id="statusSelect">
+          <option>New</option>
+          <option>Processing</option>
+          <option>Ready for Delivery</option>
+          <option>Delivered</option>
+          <option>Cancelled</option>
+        </select>
+        <button type="button" id="updateStatusBtn">Update Status</button>
+      </div>
+      <p id="lockedMessage" style="display:none">This order is closed, so its status can no longer be changed.</p>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/order-details.js"></script>
+</body>
+</html>

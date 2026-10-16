@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customers</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="page">
+    <h1>Customers</h1>
+
+    <form id="customerForm" class="card">
+      <h2 id="formTitle">Add Customer</h2>
+      <input type="hidden" id="customerId">
+      <input type="text" id="name" placeholder="Full name" required>
+      <input type="text" id="phone" placeholder="Phone number" required>
+      <input type="email" id="email" placeholder="Email (optional)">
+      <input type="text" id="address" placeholder="Address (optional)">
+      <button type="submit">Save Customer</button>
+      <button type="button" id="cancelBtn" class="secondary" style="display:none">Cancel</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Search by name, phone or email...">
+
+    <table>
+      <thead>
+        <tr><th>Name</th><th>Phone</th><th>Email</th><th>Address</th><th>Action</th></tr>
+      </thead>
+      <tbody id="customerTable"></tbody>
+    </table>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/customers.js"></script>
+</body>
+</html>
