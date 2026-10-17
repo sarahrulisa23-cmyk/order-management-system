@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Place Order</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="page">
+    <h1>Place an Order</h1>
+    <p>Ordering as: <strong id="whoAmI"></strong></p>
+
+    <div class="card">
+      <h2>1. Choose products</h2>
+      <div class="row">
+        <select id="productSelect"></select>
+        <input type="number" id="quantity" value="1" min="1" step="1">
+        <button type="button" id="addItemBtn">Add to order</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Your order</h2>
+      <table>
+        <thead>
+          <tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th>Action</th></tr>
+        </thead>
+        <tbody id="itemsTable"></tbody>
+      </table>
+      <div class="total">Total: <span id="total">0</span></div>
+      <button type="button" id="placeOrderBtn">Place Order</button>
+    </div>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/place-order.js"></script>
+</body>
+</html>

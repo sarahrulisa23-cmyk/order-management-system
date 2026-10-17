@@ -10,8 +10,7 @@ const hint = document.getElementById("formHint");
 
 function renderUsers() {
   const me = getCurrentUser();
-  const users = getData("users");
-
+  const users = getData("users").filter(u => u.role !== "customer");
   tableBody.innerHTML = users.map(u => `
     <tr>
       <td>${escapeHtml(u.name)}${u.id === me.id ? " (you)" : ""}</td>

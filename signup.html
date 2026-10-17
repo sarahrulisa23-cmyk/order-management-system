@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Sign Up</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="login-box">
+    <h1>Customer Sign Up</h1>
+    <form id="signupForm" autocomplete="off">
+      <input type="text" id="name" placeholder="Full name" required>
+      <input type="text" id="phone" placeholder="Phone number" required>
+      <input type="email" id="email" placeholder="Email (optional)">
+      <input type="text" id="address" placeholder="Address (optional)">
+      <input type="text" id="username" placeholder="Choose a username" autocomplete="off" required>
+      <input type="password" id="password" placeholder="Password (at least 6 characters)" autocomplete="new-password" required>
+      <input type="password" id="confirm" placeholder="Confirm password" autocomplete="new-password" required>
+      <button type="submit">Create account</button>
+    </form>
+    <p class="small-link">Already have an account? <a href="index.html">Log in</a></p>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

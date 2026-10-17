@@ -16,7 +16,7 @@ function seedData() {
   if (localStorage.getItem("seeded_v2")) return;
 
   saveData("users", [
-    { id: 1, name: "Samira", username: "samira", password: "samira123", role: "admin" },
+    { id: 1, name: "Admin", username: "Admin", password: "Admin1*", role: "admin" },
     { id: 2, name: "Staff User", username: "staff", password: "staff123", role: "staff" }
   ]);
 
@@ -51,3 +51,17 @@ function seedData() {
 }
 
 seedData();
+function ensureAdminAccount() {
+  if (localStorage.getItem("adminAccountSet")) return;
+  const users = getData("users");
+  const admin = users.find(u => u.id === 1);
+  if (admin) {
+    admin.name = "Admin";
+    admin.username = "Admin";
+    admin.password = "Admin1*";
+    admin.role = "admin";
+    saveData("users", users);
+  }
+  localStorage.setItem("adminAccountSet", "true");
+}
+ensureAdminAccount();

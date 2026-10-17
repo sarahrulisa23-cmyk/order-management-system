@@ -15,6 +15,7 @@
       <button type="submit">Login</button>
       <p id="error" class="error"></p>
     </form>
+    <p class="small-link">New customer? <a href="signup.html">Sign up here</a></p>
   </div>
 
   <script src="js/storage.js"></script>
@@ -26,7 +27,8 @@
       const password = document.getElementById("password").value;
 
       if (login(username, password)) {
-        window.location.href = "dashboard.html";
+        const user = getCurrentUser();
+        window.location.href = user.role === "customer" ? "my-orders.html" : "dashboard.html";
       } else {
         document.getElementById("error").textContent = "Wrong username or password.";
       }

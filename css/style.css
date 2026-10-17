@@ -32,3 +32,4 @@ button.small { padding: 5px 10px; font-size: 13px; }
 .stat { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.08); text-align: center; }
 .stat .number { font-size: 32px; font-weight: bold; }
 .stat .label { color: #64748b; font-size: 14px; }
+.small-link { text-align: center; font-size: 14px; margin-top: 12px; }

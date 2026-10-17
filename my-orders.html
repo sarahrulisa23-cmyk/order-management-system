@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Orders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="page">
+    <h1 id="welcome">My Orders</h1>
+    <p><a class="button" href="place-order.html">+ Place a new order</a></p>
+
+    <div class="card info">
+      <h2>My details</h2>
+      <p><strong>Phone:</strong> <span id="myPhone"></span></p>
+      <p><strong>Email:</strong> <span id="myEmail"></span></p>
+      <p><strong>Address:</strong> <span id="myAddress"></span></p>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Order No.</th><th>Date</th><th>Items</th><th>Status</th><th>Total</th></tr>
+      </thead>
+      <tbody id="orderTable"></tbody>
+    </table>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/my-orders.js"></script>
+</body>
+</html>
